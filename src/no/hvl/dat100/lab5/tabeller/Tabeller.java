@@ -5,9 +5,10 @@ public class Tabeller {
 //Marius, Benjamin og Lars er de råeste av de råe til å programmere >:)
 	
 	public static void main(String[] args) {
-		int[] tabell = {1, 3, 8, -7, 42, 67, 89}; //en tabell med heltall
-		SkrivUt(tabell);
-		System.out.println(tilStreng(tabell));
+		int[] tabell = { 1, 3, 8, -7, 42, 67, 89 }; // en tabell med heltall
+		SkrivUt(tabell);			//kaller metoden som skriver ut tabell
+		System.out.println(tilStreng(tabell));	//kaller og skriver ut metoden som konverterer fra int til string
+		System.out.println(summer(tabell));	//kaller og skriver ut metoden som summerer tabell
 		 }	
 	
 	//metode for å skrive ut en tabell
@@ -36,13 +37,14 @@ public class Tabeller {
 		
 		return Stringtabell;
 }
-}
 
 	// c)
 	public static int summer(int[] tabell) {
+		int sum = 0;
+		for (int tall : tabell) {
+			sum += tall; }
+			return sum;
 
-		// TODO
-		throw new UnsupportedOperationException("summer ikke implementert");
 	}
 
 	// d)
