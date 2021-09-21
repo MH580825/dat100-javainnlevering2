@@ -2,7 +2,7 @@ package no.hvl.dat100.lab5.tabeller;
 
 public class Tabeller {
 
-
+//Marius, Benjamin og Lars er de råeste av de råe til å programmere >:)
 	
 	public static void main(String[] args) {
 		int[] tabell = {1, 3, 8, -7, 42, 67, 89}; //en tabell med heltall
@@ -10,35 +10,33 @@ public class Tabeller {
 		System.out.println(tilStreng(tabell));
 		 }	
 	
-	public static void skrivUt(int[] tabell) {
-
-		//metode for å skrive ut en tabell
+	//metode for å skrive ut en tabell
 	public static void SkrivUt(int[] tabell) {
 		
-		System.out.print("[ ");
+		System.out.print("[");
 		
-		for (int tall : tabell) {
-		System.out.print(tall + ", ");
+		int i;
+		for ( i=0; i < tabell.length-1; i++) {
+		System.out.print(tabell[i] + ",");
 		}
-		
-		System.out.println("]");
+		System.out.println(tabell[i] + "]");
 		
 	}
 
 	// b)
+	//metode for å konvertere fra int til string
 	public static String tilStreng(int[] tabell) {
 		
 		String Stringtabell = "[";
-		
-		for (int tall : tabell) {
-			Stringtabell = Stringtabell + " " + tall + ",";
+		int i;
+		for ( i=0; i < tabell.length-1; i++) {
+			Stringtabell = Stringtabell + tabell[i] + ",";
 		}
-		Stringtabell = Stringtabell + " ]";
+		Stringtabell = Stringtabell + tabell[i] + "]";
 		
 		return Stringtabell;
 }
-
-	}
+}
 
 	// c)
 	public static int summer(int[] tabell) {
