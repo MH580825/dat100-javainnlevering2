@@ -9,6 +9,7 @@ public class Tabeller {
 		SkrivUt(tabell);			//kaller metoden som skriver ut tabell
 		System.out.println(tilStreng(tabell));	//kaller og skriver ut metoden som konverterer fra int til string
 		System.out.println(summer(tabell));	//kaller og skriver ut metoden som summerer tabell
+		System.out.println(finnesTall(tabell,1)); //kaller metode som sjekker om oppgitt nummer f.eks (1) er i tabell og returnerer true/false
 		 }	
 	
 	//metode for å skrive ut en tabell
@@ -66,10 +67,21 @@ public class Tabeller {
 	}
 
 	// d)
-	public static boolean finnesTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("finnesTall ikke implementert");
+	//metode som sjekker om et tall ligger i tabellen og oppgir true/false
+	public static boolean finnesTall (int[] tabell, int tall) {
+		boolean finnes = false;
+		int i = 0;
+		
+		while (i < tabell.length && (!finnes)) {
+			
+			if (tabell[i] == tall) {
+				finnes = true;
+			}
+			
+			i++;
+		}
+		
+		return finnes;
 	}
 
 	// e)
