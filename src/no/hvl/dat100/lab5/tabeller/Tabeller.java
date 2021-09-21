@@ -6,7 +6,7 @@ public class Tabeller {
 	public static void skrivUt(int[] tabell) {
 
 		// TODO
-		// kommentar
+		// Hei Lars og Benjamin
 		throw new UnsupportedOperationException("skrivUt ikke implementert");
 
 	}
