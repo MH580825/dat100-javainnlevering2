@@ -6,7 +6,6 @@ public class Tabeller {
 	
 	public static void main(String[] args) {
 		int[] tabell = {1, 3, 8, -7, 42, 67, 89}; //en tabell med heltall
-		Arrays.sort(tabell); 	//Sorterer i stigende rekkefølge
 		SkrivUt(tabell);
 		System.out.println(tilStreng(tabell));
 		 }	
