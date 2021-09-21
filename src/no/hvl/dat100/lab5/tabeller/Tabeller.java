@@ -39,14 +39,16 @@ public class Tabeller {
 }
 
 	// c)
-	//for løkke
-	public static int summer(int[] tabell) {
+	public static int summer(int[] tabell) {		//for løkke
 		int sum = 0;
-		for (int tall : tabell) {
-			sum += tall; }
-			return sum;
-	//while løkke
-		//	public static int summer(int[] tabell) {
+		int i;
+		for (i = 0; i < tabell.length; i++) {
+			sum += tabell[i]; }
+			i = i+1;
+		
+		return sum;
+		
+//	public static int summer(int[] tabell) {		//while løkke
 //		int i = 0;
 //		int sum = 0;
 //	while (i < tabell.length) {
@@ -54,7 +56,13 @@ public class Tabeller {
 //		i = i+1;
 //	}
 //		return sum;
-
+//	public static int summer(int[] tabell) {		//utvidet for-løkke
+//		int sum = 0;
+//		for (int tall : tabell) {
+//			sum += tall; }
+//			return sum;
+//			}
+	
 	}
 
 	// d)
