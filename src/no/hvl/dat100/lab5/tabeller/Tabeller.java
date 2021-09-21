@@ -2,21 +2,43 @@ package no.hvl.dat100.lab5.tabeller;
 
 public class Tabeller {
 
-	// a)
+
+	
+	public static void main(String[] args) {
+		int[] tabell = {1, 3, 8, -7, 42, 67, 89}; //en tabell med heltall
+		Arrays.sort(tabell); 	//Sorterer i stigende rekkefølge
+		SkrivUt(tabell);
+		System.out.println(tilStreng(tabell));
+		 }	
+	
 	public static void skrivUt(int[] tabell) {
 
-		// TODO
-		// Hei Lars og Benjamin
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
-
+		//metode for å skrive ut en tabell
+	public static void SkrivUt(int[] tabell) {
+		
+		System.out.print("[ ");
+		
+		for (int tall : tabell) {
+		System.out.print(tall + ", ");
+		}
+		
+		System.out.println("]");
+		
 	}
 
 	// b)
 	public static String tilStreng(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
 		
+		String Stringtabell = "[";
+		
+		for (int tall : tabell) {
+			Stringtabell = Stringtabell + " " + tall + ",";
+		}
+		Stringtabell = Stringtabell + " ]";
+		
+		return Stringtabell;
+}
+
 	}
 
 	// c)
