@@ -7,7 +7,7 @@ public class Tabeller {
 	public static void main(String[] args) {
 
 		int[] tabell = { 1, 3, 8, -7, 42, 67, 89 }; // en tabell med heltall
-		int[] tabell2 = { 6, 7, 9 };
+		int[] tabell2 = { 6, 7, 9 }; // ekstra tabell p.g.a oppgave h)
 		
 		SkrivUt(tabell); // kaller metoden som skriver ut tabell
 		System.out.println(tilStreng(tabell)); // kaller og skriver ut metoden som konverterer fra int til string
