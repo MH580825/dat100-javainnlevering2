@@ -5,54 +5,58 @@ public class Tabeller {
 //Marius, Benjamin og Lars er de råeste av de råe til å programmere >:)
 	
 	public static void main(String[] args) {
+
 		int[] tabell = { 1, 3, 8, -7, 42, 67, 89 }; // en tabell med heltall
-		SkrivUt(tabell);			//kaller metoden som skriver ut tabell
-		System.out.println(tilStreng(tabell));	//kaller og skriver ut metoden som konverterer fra int til string
-		System.out.println(summer(tabell));	//kaller og skriver ut metoden som summerer tabell
+		int[] tabell2 = { 6, 7, 9 };
+		
+		SkrivUt(tabell); // kaller metoden som skriver ut tabell
+		System.out.println(tilStreng(tabell)); // kaller og skriver ut metoden som konverterer fra int til string
+		System.out.println(summer(tabell)); // kaller og skriver ut metoden som summerer tabell
 		System.out.println(finnesTall(tabell,1)); //kaller metode som sjekker om oppgitt nummer f.eks (1) er i tabell og returnerer true/false
 		System.out.println(posisjonTall(tabell,89)); //leser av posisjon på tallet i tabellen. f.eks tallet 89 er på posisjon 6
 		SkrivUt(reverser(tabell)); // skriver ut reversert tabell
 		System.out.println(erSortert(tabell)); //kaller metode som sjekker om tallene i tabellen er sortert i stigende rekkefølge
 		SkrivUt(settSammen(tabell,tabell2)); // kaller metode som setter sammen tabellene
-	}	
 	
-	//metode for å skrive ut en tabell
+	}
+	// a)
+	// metode for å skrive ut en tabell
 	public static void SkrivUt(int[] tabell) {
-		
+
 		System.out.print("[");
-		
+
 		int i;
-		for ( i=0; i < tabell.length-1; i++) {
-		System.out.print(tabell[i] + ",");
+		for (i = 0; i < tabell.length - 1; i++) {
+			System.out.print(tabell[i] + ",");
 		}
 		System.out.println(tabell[i] + "]");
-		
-	}
 
+	}
 	// b)
-	//metode for å konvertere fra int til string
+	// metode for å konvertere fra int til string
 	public static String tilStreng(int[] tabell) {
-		
+
 		String Stringtabell = "[";
 		int i;
-		for ( i=0; i < tabell.length-1; i++) {
+		for (i = 0; i < tabell.length - 1; i++) {
 			Stringtabell = Stringtabell + tabell[i] + ",";
 		}
 		Stringtabell = Stringtabell + tabell[i] + "]";
-		
+
 		return Stringtabell;
-}
+	}
 
 	// c)
-	public static int summer(int[] tabell) {		//for løkke
+	public static int summer(int[] tabell) { // for løkke
 		int sum = 0;
 		int i;
 		for (i = 0; i < tabell.length; i++) {
-			sum += tabell[i]; }
-			i = i+1;
-		
+			sum += tabell[i];
+		}
+		i = i + 1;
+
 		return sum;
-		
+
 //	public static int summer(int[] tabell) {		//while løkke
 //		int i = 0;
 //		int sum = 0;
@@ -67,11 +71,11 @@ public class Tabeller {
 //			sum += tall; }
 //			return sum;
 //			}
-	
 	}
-
+	
 	// d)
 	//metode som sjekker om et tall ligger i tabellen og oppgir true/false
+	
 	public static boolean finnesTall (int[] tabell, int tall) {
 		boolean finnes = false;
 		int i = 0;
@@ -87,26 +91,22 @@ public class Tabeller {
 		
 		return finnes;
 	}
-
+	
 	// e)
 	// metode som finner posisjon på tall i tabell
 	public static int posisjonTall(int[] tabell, int tall) {
-		public static boolean finnesTall (int[] tabell, int tall) {
-		boolean finnes = false;
-		int i = 0;
+		int teller = 0;
+		int i = -1;
 		
-		while (i < tabell.length && (!finnes)) {
-			
-			if (tabell[i] == tall) {
-				finnes = true;
+		while (teller < tabell.length && teller != tall) {
+			if (tabell[teller] == tall) {
+				i =  teller;
+				break;
 			}
-			
-			i++;
+			teller++;
 		}
-		
-		return finnes;
-	}
-
+		return i;
+}	
 	// f)
 	//metode som kopierer en tabell men i motsatt rekkefølge
 	public static int[] reverser(int[] tabell) {
@@ -118,10 +118,7 @@ public class Tabeller {
 			nr -= 1;
 		}
 		return reversert;
-		
-		
 }
-
 	// g)
 	//metode som sjekker om heltall er sortert stigende
 public static boolean erSortert(int[] tabell) {
@@ -138,12 +135,7 @@ public static boolean erSortert(int[] tabell) {
 		return sortert;
 }
 
-	// h)
-	public static int[] settSammen(int[] tabell1, int[] tabell2) {
-
-		// TODO
-		throw new UnsupportedOperationException("settSammen ikke implementert");
-	}
+// h)
 //metode for å sette sammen tabeller
 public static int[] settSammen(int[] tabell1, int[] tabell2) {
 	
