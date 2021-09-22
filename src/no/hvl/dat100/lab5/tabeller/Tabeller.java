@@ -10,6 +10,7 @@ public class Tabeller {
 		System.out.println(tilStreng(tabell));	//kaller og skriver ut metoden som konverterer fra int til string
 		System.out.println(summer(tabell));	//kaller og skriver ut metoden som summerer tabell
 		System.out.println(finnesTall(tabell,1)); //kaller metode som sjekker om oppgitt nummer f.eks (1) er i tabell og returnerer true/false
+		System.out.println(posisjonTall(tabell,89)); //leser av posisjon på tallet i tabellen. f.eks tallet 89 er på posisjon 6
 		 }	
 	
 	//metode for å skrive ut en tabell
@@ -85,11 +86,22 @@ public class Tabeller {
 	}
 
 	// e)
+	// metode som finner posisjon på tall i tabell
 	public static int posisjonTall(int[] tabell, int tall) {
-
-		// TODO
-		throw new UnsupportedOperationException("posisjonTall ikke implementert");
-
+		public static boolean finnesTall (int[] tabell, int tall) {
+		boolean finnes = false;
+		int i = 0;
+		
+		while (i < tabell.length && (!finnes)) {
+			
+			if (tabell[i] == tall) {
+				finnes = true;
+			}
+			
+			i++;
+		}
+		
+		return finnes;
 	}
 
 	// f)
