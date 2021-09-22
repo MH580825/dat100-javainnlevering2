@@ -2,46 +2,50 @@ package no.hvl.dat100.lab5.tabeller;
 
 public class Tabeller {
 
-//Marius, Benjamin og Lars er de rÃ¥este av de rÃ¥e til Ã¥ programmere >:)
+//Marius, Benjamin og Lars er de råeste av de råe til å programmere >:)
 	
 	public static void main(String[] args) {
 
 		int[] tabell = { 1, 3, 8, -7, 42, 67, 89 }; // en tabell med heltall
 		int[] tabell2 = { 6, 7, 9 }; // ekstra tabell p.g.a oppgave h)
-		
+		//Vi har valgt å skrive ut alle metodene her i tillegg til at de virker i JUnit. Både for egen læring og morroskyld.
 		SkrivUt(tabell); // kaller metoden som skriver ut tabell
 		System.out.println(tilStreng(tabell)); // kaller og skriver ut metoden som konverterer fra int til string
 		System.out.println(summer(tabell)); // kaller og skriver ut metoden som summerer tabell
 		System.out.println(finnesTall(tabell,1)); //kaller metode som sjekker om oppgitt nummer f.eks (1) er i tabell og returnerer true/false
-		System.out.println(posisjonTall(tabell,89)); //leser av posisjon pÃ¥ tallet i tabellen. f.eks tallet 89 er pÃ¥ posisjon 6
+		System.out.println(posisjonTall(tabell,89)); //leser av posisjon på tallet i tabellen. f.eks tallet 89 er pÃ¥ posisjon 6
 		SkrivUt(reverser(tabell)); // skriver ut reversert tabell
-		System.out.println(erSortert(tabell)); //kaller metode som sjekker om tallene i tabellen er sortert i stigende rekkefÃ¸lge
+		System.out.println(erSortert(tabell)); //kaller metode som sjekker om tallene i tabellen er sortert i stigende rekkefølge
 		SkrivUt(settSammen(tabell,tabell2)); // kaller metode som setter sammen tabellene
 	
 	}
 	// a)
-	// metode for Ã¥ skrive ut en tabell
+	// metode for å skrive ut en tabell
 	public static void SkrivUt(int[] tabell) {
 
 		System.out.print("[");
 
 		int i;
+		if (tabell.length > 0) {
 		for (i = 0; i < tabell.length - 1; i++) {
 			System.out.print(tabell[i] + ",");
 		}
-		System.out.println(tabell[i] + "]");
+		System.out.println(tabell[i] + "]"); }
+		else System.out.println("Tabellen er tom");
 
 	}
 	// b)
-	// metode for Ã¥ konvertere fra int til string
+	// metode for å konvertere fra int til string
 	public static String tilStreng(int[] tabell) {
 
 		String Stringtabell = "[";
 		int i;
+		if (tabell.length > 0) {
 		for (i = 0; i < tabell.length - 1; i++) {
 			Stringtabell = Stringtabell + tabell[i] + ",";
 		}
-		Stringtabell = Stringtabell + tabell[i] + "]";
+		Stringtabell = Stringtabell + tabell[i] + "]"; }
+		else System.out.println("Tabellen er tom");
 
 		return Stringtabell;
 	}
@@ -57,7 +61,7 @@ public class Tabeller {
 
 		return sum;
 
-//	public static int summer(int[] tabell) {		//while lÃ¸kke
+//	public static int summer(int[] tabell) {		//while løkke
 //		int i = 0;
 //		int sum = 0;
 //	while (i < tabell.length) {
@@ -65,7 +69,7 @@ public class Tabeller {
 //		i = i+1;
 //	}
 //		return sum;
-//	public static int summer(int[] tabell) {		//utvidet for-lÃ¸kke
+//	public static int summer(int[] tabell) {		//utvidet for-løkke
 //		int sum = 0;
 //		for (int tall : tabell) {
 //			sum += tall; }
@@ -93,7 +97,7 @@ public class Tabeller {
 	}
 	
 	// e)
-	// metode som finner posisjon pÃ¥ tall i tabell
+	// metode som finner posisjon på tall i tabell
 	public static int posisjonTall(int[] tabell, int tall) {
 		int teller = 0;
 		int i = -1;
@@ -108,7 +112,7 @@ public class Tabeller {
 		return i;
 }	
 	// f)
-	//metode som kopierer en tabell men i motsatt rekkefÃ¸lge
+	//metode som kopierer en tabell men i motsatt rekkefølge
 	public static int[] reverser(int[] tabell) {
 		int[] reversert = new int [tabell.length];
 		int nr = tabell.length;
@@ -136,7 +140,7 @@ public static boolean erSortert(int[] tabell) {
 }
 
 // h)
-//metode for Ã¥ sette sammen tabeller
+//metode for å sette sammen tabeller
 public static int[] settSammen(int[] tabell1, int[] tabell2) {
 	
 	int lengde = tabell1.length + tabell2.length;
