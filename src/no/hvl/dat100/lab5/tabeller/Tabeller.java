@@ -12,8 +12,8 @@ public class Tabeller {
 		System.out.println(finnesTall(tabell,1)); //kaller metode som sjekker om oppgitt nummer f.eks (1) er i tabell og returnerer true/false
 		System.out.println(posisjonTall(tabell,89)); //leser av posisjon på tallet i tabellen. f.eks tallet 89 er på posisjon 6
 		SkrivUt(reverser(tabell)); // skriver ut reversert tabell
-		
-	
+		System.out.println(erSortert(tabell)); //kaller metode som sjekker om tallene i tabellen er sortert i stigende rekkefølge
+		SkrivUt(settSammen(tabell,tabell2)); // kaller metode som setter sammen tabellene
 	}	
 	
 	//metode for å skrive ut en tabell
@@ -123,11 +123,20 @@ public class Tabeller {
 }
 
 	// g)
-	public static boolean erSortert(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("erSortert ikke implementert");
-	}
+	//metode som sjekker om heltall er sortert stigende
+public static boolean erSortert(int[] tabell) {
+		
+		boolean sortert = true;
+		
+		for (int i = 0; i < tabell.length-1; i++) {
+			
+			if(tabell[i] > tabell[i+1]) {
+				sortert = false;
+			}
+			
+		}
+		return sortert;
+}
 
 	// h)
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
@@ -135,4 +144,25 @@ public class Tabeller {
 		// TODO
 		throw new UnsupportedOperationException("settSammen ikke implementert");
 	}
+//metode for å sette sammen tabeller
+public static int[] settSammen(int[] tabell1, int[] tabell2) {
+	
+	int lengde = tabell1.length + tabell2.length;
+	int[] nyTabell = new int[lengde];
+	int teller = 0;
+	
+	for (int i = 0; i < nyTabell.length; i++) {
+		
+		if (i < tabell1.length) {
+			nyTabell[i] = tabell1[i];
+		}
+		else {
+			nyTabell[i] = tabell2[teller];
+			teller++;
+		}
+	}
+	
+	return nyTabell;
+	
+}
 }
