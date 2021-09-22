@@ -11,7 +11,10 @@ public class Tabeller {
 		System.out.println(summer(tabell));	//kaller og skriver ut metoden som summerer tabell
 		System.out.println(finnesTall(tabell,1)); //kaller metode som sjekker om oppgitt nummer f.eks (1) er i tabell og returnerer true/false
 		System.out.println(posisjonTall(tabell,89)); //leser av posisjon på tallet i tabellen. f.eks tallet 89 er på posisjon 6
-		 }	
+		SkrivUt(reverser(tabell)); // skriver ut reversert tabell
+		
+	
+	}	
 	
 	//metode for å skrive ut en tabell
 	public static void SkrivUt(int[] tabell) {
@@ -105,12 +108,19 @@ public class Tabeller {
 	}
 
 	// f)
+	//metode som kopierer en tabell men i motsatt rekkefølge
 	public static int[] reverser(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("reverser ikke implementert");
+		int[] reversert = new int [tabell.length];
+		int nr = tabell.length;
 		
-	}
+		for (int i = 0; i < tabell.length; i++) {
+			reversert[nr - 1] = tabell[i];
+			nr -= 1;
+		}
+		return reversert;
+		
+		
+}
 
 	// g)
 	public static boolean erSortert(int[] tabell) {
