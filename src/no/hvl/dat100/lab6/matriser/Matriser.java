@@ -1,8 +1,7 @@
 package no.hvl.dat100.lab6.matriser;
 
 public class Matriser {
-	// vi har også her valgt å legge til main metode og kalle alle funksjonene selv,
-	// --
+	// vi har også her valgt å legge til main metode og kalle alle funksjonene selv, --
 	// for å få en bedre forståelse og bedre læring :)
 	public static void main(String[] args) {
 		int[][] matrise1 = { { 2, 1, 4 }, { 4, 2, 1 }, { 2, 2, 2 } };
@@ -14,8 +13,8 @@ public class Matriser {
 		skrivUt(nyMatrise);
 		
 		boolean lik = erLik(matrise1, matrise2);	//kaller metoden som sjekker om matrisene er like
-		if ( lik == true) {							// dersom like:
-			System.out.println("Matrisene er like");//skrives dette ut
+		if ( lik == true) {	
+			System.out.println("Matrisene er like");//dersom like, skrives dette ut
 		}
 		else {
 			System.out.println("Matrisene er ulike"); //ellers skrives dette ut
@@ -50,8 +49,7 @@ public class Matriser {
 	}
 
 	// c)
-	// metode som returnerer en ny matrise der alle tall i matrisen er multiplisert
-	// med tall
+	// metode som returnerer en ny matrise der alle tall i matrisen er multiplisert med tall
 	public static int[][] skaler(int tall, int[][] matrise) {
 
 		int[][] nyMatrise = new int[matrise.length][matrise[0].length];
