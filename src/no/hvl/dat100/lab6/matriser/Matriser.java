@@ -1,50 +1,68 @@
 package no.hvl.dat100.lab6.matriser;
 
 public class Matriser {
+	
+	public static void main(String[] args) {
+		int[][] matrise1 = { { 2, 1, 4 }, { 4, 2, 1 }, {2, 2, 2}};
+		int[][] matrise2 = { { 1, 2, 3 }, { 4, 5, 6 }, {7, 8, 9}};
+		skrivUt(matrise1);
+		skrivUt(matrise2);
+		System.out.println(tilStreng(matrise1));
+		int [][]nyMatrise =skaler(5, matrise1);
+		skrivUt(nyMatrise);
+	}
 
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("skrivUt ikke implementert");
-	}
+		for (int[] rad : matrise) {
+			for (int a : rad) {
+			System.out.println(a + " ");
+			}
+			System.out.println();
+		}}
 
 	// b)
 	public static String tilStreng(int[][] matrise) {
 
-		// TODO
-		throw new UnsupportedOperationException("tilStreng ikke implementert");
-		
-	}
+		String matriseString = "";
+		for(int []rad : matrise) {
+			for(int a : rad) {
+				matriseString = matriseString + Integer.toString(a) + " ";
+			}
+			matriseString += "\n";
+		}
+		return matriseString;
+	}	
+	
 
 	// c)
 	public static int[][] skaler(int tall, int[][] matrise) {
 		
-		// TODO
-		throw new UnsupportedOperationException("skaler ikke implementert");
-	
-	}
-
-	// d)
-	public static boolean erLik(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("erLik ikke implementert");
-	}
-	
-	// e)
-	public static int[][] speile(int[][] matrise) {
-
-		// TODO
-		throw new UnsupportedOperationException("speile ikke implementert");
-	
-	}
-
-	// f)
-	public static int[][] multipliser(int[][] a, int[][] b) {
-
-		// TODO
-		throw new UnsupportedOperationException("multipliser ikke implementert");
-	
-	}
-}
+		int [][]nyMatrise = new int[matrise.length][matrise[0].length];
+		for(int rad = 0; rad<matrise.length; rad++) {
+			for(int a = 0; a<matrise[rad].length; a++) {
+				nyMatrise[rad][a] = matrise[rad][a]*tall;
+			}
+		}
+		return nyMatrise;
+	}}
+//	// d)
+//	public static boolean erLik(int[][] a, int[][] b) {
+//
+//		
+//	}
+//	
+//	// e)
+//	public static int[][] speile(int[][] matrise) {
+//
+//		
+//	
+//	}
+//
+//	// f)
+//	public static int[][] multipliser(int[][] a, int[][] b) {
+//
+//	
+//	}
+//}
