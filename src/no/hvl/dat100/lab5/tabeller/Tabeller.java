@@ -57,7 +57,7 @@ public class Tabeller {
 		for (i = 0; i < tabell.length; i++) {
 			sum += tabell[i];
 		}
-		i = i + 1;
+		i = i++;
 
 		return sum;
 
@@ -119,7 +119,7 @@ public class Tabeller {
 		
 		for (int i = 0; i < tabell.length; i++) {
 			reversert[nr - 1] = tabell[i];
-			nr -= 1;
+			nr = nr -1;
 		}
 		return reversert;
 }

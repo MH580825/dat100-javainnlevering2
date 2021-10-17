@@ -121,7 +121,7 @@ public class Matriser {
 
 					for (int colb = 0; colb < nyMatrise.length; colb++) {
 
-						sum += a[row][colb] * b[colb][col];
+						sum = sum + a[row][colb] * b[colb][col];
 					}
 					nyMatrise[row][col] += sum;
 				}
